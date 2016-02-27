@@ -1,0 +1,194 @@
+
+#shaph {
+    display: none;
+}
+
+#shaph.open {
+    display: block;
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#shaph-bg {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+#shaph-modal  {
+    position: relative;
+    z-index: 2;
+    background-color: #f7941d;
+    border: 1px solid #fdc689;
+    border-radius: 4px;
+    width: 90%;
+    margin: 100px auto;
+    min-height: 300px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.75);
+}
+
+.shaph-title {
+    font-family: 'Inknut Antiqua', serif;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin: 40px 0;
+}
+
+@media (min-width: 750px) {
+    .shaph-title {
+        font-size: 30px !important;
+    }
+}
+
+#shaph-browse {
+    display: block;
+    margin: 0 auto;
+    background: #fffcf2;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    color: #000;
+    font-family: 'Inknut Antiqua', serif;
+    padding: 20px;
+    font-size: 24px;
+    text-shadow: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#shaph-browse:hover {
+    color: #555;
+}
+
+#shaph-cancel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    color: #fffcf2;
+    background: none;
+    box-shadow: none;
+    outline: none;
+    font-family: 'Inknut Antiqua', serif;
+    font-size: 14px;
+    text-shadow: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#shaph-cancel:hover {
+    color: white;
+}
+
+@media (min-width: 750px) {
+    #shaph-cancel {
+        font-size: 18px !important;
+    }
+}
+
+#shaph-page {
+    margin: 0 20px 130px 20px;
+}
+
+#shaph-page p {
+    font-family: 'Inknut Antiqua', serif;
+    color: #fffcf2;
+}
+
+#shaph-page p b {
+    color: #FFF;
+}
+
+#shaph-page label {
+    display: block;
+    color: #000;
+    margin: 0 0 5px 0;
+    font-family: 'Inknut Antiqua', serif;
+}
+
+#shaph-page .text-input {
+    background-color: #fdc689;
+    padding: 10px;
+    width: 90%;
+    font-family: 'Inknut Antiqua', serif;
+    font-size: 14px;
+    color: #000;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+#shaph-image-preview {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#shaph-image-preview img {
+    width: 98%;
+    border: 1px solid white;
+}
+
+#shaph-image-attributes {
+    width: 100%;
+}
+
+@media (min-width: 750px) {
+    #shaph-image-editor {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding: 0;
+    }
+    #shaph-image-attributes {
+        width: 75%;
+    }
+
+    #shaph-image-preview {
+        width: 20%;
+        margin-bottom: 0;
+    }
+}
+
+#shaph-footer-buttons {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #fdc689;
+    border-radius: 0 0 4px 4px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#shaph-footer-buttons input {
+    margin-left: 10px;
+    background: #fffcf2;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    color: #000;
+    font-family:'Inknut Antiqua', serif;
+    padding: 10px;
+    font-size: 16px;
+    text-shadow: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#shaph-footer-buttons input:hover {
+    background: #f7941d;
+}
+
+#shaph-footer-buttons input:disabled {
+    opacity: 0.3;
+}

@@ -1,6 +1,13 @@
 # ignore all
-*
+/*
 !.gitignore
 !README.md
 !wp-content/
+wp-content/*
+!wp-content/plugins
+!wp-content/themes
+wp-content/plugins/*
+wp-content/themes/*
+!wp-content/plugins/living-flea
+!wp-content/themes/original-flea
 

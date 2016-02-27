@@ -1,0 +1,786 @@
+/*
+Theme Name: Original Flea
+Author: Mint Mustache Media
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: original-flea
+
+/* =Reset
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+html {
+	overflow-y: scroll; /* Keeps page centered in all browsers regardless of content height */
+	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+	-ms-text-size-adjust:     100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+body {
+	background: #fff;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+table { /* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a:focus {
+	outline: thin dotted;
+}
+a:hover,
+a:active { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
+	outline: 0;
+}
+a img {
+	border: 0;
+}
+
+/* =Global
+-------------------------------------------------------------- */
+body {
+	background: #fffcf2;
+	color: black;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-weight: 300;
+	font-size: 16px;
+}
+
+#page {
+	width: 100%;
+}
+
+.wrapper {
+	max-width: 1100px;
+	margin: 0 auto;
+	width: 98%;
+}
+
+.button, .shaph-button {
+	cursor: pointer;
+	background: #FFF;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	text-shadow: none;
+	outline: none;
+	border: none;
+	color: #000;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	padding: 10px;
+	font-size: 16px;
+	display: inline-block;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	font-weight: bold;
+	-webkit-appearance: none;
+	text-decoration: none;
+}
+
+.button.small, #header .shaph-button {
+	font-size: 11px;
+	padding: 10px;
+}
+
+.button:hover, .shaph-button:hover {
+	background: #DDD;
+}
+
+h2 {
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+p {
+	margin-bottom: 10px;
+}
+
+@media screen and ( min-width: 510px ) {
+	h2 {
+		font-size: 18px;
+	}
+
+	#header .shaph-button {
+		padding: 10px !important;
+	}
+}
+
+@media screen and ( min-width: 720px ) {
+	h2 {
+		font-size: 20px;
+	}
+
+	#header .shaph-button {
+		padding: 10px !important;
+	}
+}
+
+@media screen and ( min-width: 980px ) {
+	#header .shaph-button {
+		padding: 10px !important;
+	}
+}
+
+
+
+/* =Header
+-------------------------------------------------------------- */
+#header-main {
+	padding: 20px;
+	background: #f7941d;
+}
+
+#header-main .wrapper {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-around;
+	justify-content: space-around;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+#share-button {
+	width: 30%;
+	text-align: right;
+}
+
+#menu {
+	width: 5%;
+	position: relative;
+}
+
+#menu img {
+	width: 100%;
+	height: auto;
+}
+
+#menu a {
+	cursor: pointer;
+}
+
+#menu #nav-items {
+	width: 260px;
+	position: absolute;
+	top: 35px;
+	right: -10px;
+	background-color: #FFF;
+	padding: 20px;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+	border-radius: 4px;
+	display: none;
+}
+
+.user-card {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-around;
+	justify-content: space-around;
+	-webkit-align-items: center;
+	align-items: center;
+	margin: 0 0 20px 0;
+}
+
+.user-card .avatar {
+	width: 15%;
+}
+
+.user-card .avatar img {
+	width: 100%;
+	height: auto;
+	border-radius: 20px;
+}
+
+.user-card .user-links {
+	width: 75%;
+}
+
+.user-links p {
+	font-weight: bold;
+}
+
+.nav-item a, .nav-item a:visited {
+	display: block;
+	padding: 20px 10px;
+	margin: 0;
+	color: black;
+	text-decoration: none;
+}
+
+.nav-item a:hover {
+	background-color: #EEE;
+}
+
+#nav-items .user-links a, #nav-items .user-links a:visited {
+	font-size: 12px;
+	color: #777;
+	text-decoration: none;
+}
+
+#nav-items .user-links a:hover {
+	text-decoration: underline;
+}
+
+.fb-login-button.large {
+	cursor: pointer;
+	display: block;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.fb-login-button img {
+	width: 100%;
+}
+
+#logo {
+	width: 55%;
+	display: block;
+	text-align: left;
+	height: 25px;
+}
+
+#logo img {
+	width: 194px;
+	height: 25px;
+}
+
+#header-sub {
+	background: #fdc689;
+	padding: 10px;
+	margin-bottom: 40px;
+}
+
+#header-sub p {
+	font-weight: bold;
+	text-align: center;
+	margin: 0;
+	font-size: 18px;
+}
+
+@media screen and ( min-width: 510px ) {
+
+	#logo img {
+		width: 253px;
+		height: 32px;
+	}
+
+	#logo {
+		height: 32px;
+	}
+
+	#menu #nav-items {
+		top: 45px;
+	}
+}
+
+@media screen and ( min-width: 720px ) {
+	#header .shaph-button {
+		font-size: 16px;
+		padding: 0 10px;
+	}
+
+	#logo img {
+		width: 366px;
+		height: 42px;
+	}
+
+	#logo {
+		height: 42px;
+	}
+
+	#menu #nav-items {
+		top: 55px;
+	}
+
+	.fb-login-button.large {
+		width: 50%;
+	}
+}
+
+@media screen and ( min-width: 980px ) {
+	#logo img {
+		width: 506px;
+		height: 64px;
+	}
+
+	#logo {
+		height: 64px;
+	}
+	#header .shaph-button {
+		font-size: 18px;
+		padding: 0 20px;
+	}
+}
+
+/* =Posts
+-------------------------------------------------------------- */
+
+#primary {
+	width: 95%;
+	margin: 0 auto;
+	max-width: 700px;
+}
+
+.post {
+	margin: 0 0 40px 0;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+	border-radius: 4px;
+	background: #FFF;
+}
+
+.post p a, .post p a:visited {
+	text-decoration: none;
+	color: #f7941d;
+}
+
+.post p a:hover {
+	color: #fdc689;
+}
+
+.post .post-title, .post .post-title:visited {
+	display: block;
+	padding: 10px;
+	text-align: center;
+	background-color: #000;
+	color: #FFF;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.post-header {
+	display: -webkit-flex;
+	display: flex;
+	padding: 10px;
+	-webkit-justify-content: space-around;
+	justify-content: space-around;
+	-webkit-align-items: center;
+	align-items: center;
+	font-size: 14px;
+}
+
+.post-header .avatar {
+	width: 10%;
+}
+
+.post-header .avatar img {
+	width: 100%;
+	height: auto;
+	border-radius: 20px;
+}
+
+.post-header .post-meta {
+	width: 65%
+}
+
+.post-header .post-author {
+	font-weight: bold;
+	margin-bottom: 0 !important;
+}
+
+.post-header .post-date {
+	width: 20%;
+	font-size: 11px;
+	text-align: right;
+}
+
+.sharedaddy {
+	text-align: center;
+	padding: 0 0 10px 0;
+}
+
+div.sharedaddy h3.sd-title:before {
+	border-top: none !important;
+}
+
+.post-comment-form {
+	padding: 0 20px 20px 20px;
+	border-bottom: 1px solid #CCC;
+}
+
+.post-comment-input {
+	border: none;
+	outline: none;
+	font-size: 16px;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	width: 100%;
+}
+
+.post-comments.empty {
+	display: none;
+}
+
+.post-comments {
+	padding: 0 20px 10px 20px;
+	border-bottom: 1px solid #CCC;
+	margin: 0 0 20px 0;
+}
+
+.comment-login {
+	padding: 0 20px;
+}
+
+.comment-login a.comment-login-button {
+	font-style: italic;
+	cursor: pointer;
+}
+
+@media screen and ( min-width: 510px ) {
+	.post-header .post-date {
+		font-size: 12px;
+	}
+}
+
+@media screen and ( min-width: 720px ) {
+	.post-header .avatar {
+		width: 5%;
+	}
+
+	.post-header .post-meta {
+		width: 70%
+	}
+
+	.post .post-title, .post .post-title:visited {
+		font-size: 14px;
+	}
+}
+
+/* =Post Images
+-------------------------------------------------------------- */
+
+.gallery-single {
+	margin: 0 0 20px 0;
+	text-align: center;
+}
+
+.gallery-caption {
+	padding: 20px;
+	border-bottom: 1px solid #CCC;
+	border-top: 1px solid #CCC;
+	text-align: left !important;
+	font-style: italic;
+}
+
+.slideshow {
+	width: 100%;
+	text-align: center;
+	border-bottom: 1px solid #CCC;
+	position: relative;
+}
+
+.gallery-image {
+	width: 100%;
+	height: auto;
+}
+
+.gallery-image.vertical {
+	height: 250px !important;
+	width: auto !important;
+}
+
+.gallery-multi .hidden {
+	display: none;
+}
+
+.slideshow-buttons {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	height: 48px;
+	bottom: 10px;
+	opacity: 0.4;
+}
+
+.slideshow-buttons:hover {
+	opacity: 0.8;
+}
+
+.slideshow-buttons a {
+	cursor: pointer;
+}
+
+.slideshow-buttons a img {
+	width: 40px;
+	height: 24px;
+}
+
+@media screen and ( min-width: 510px ) {
+	.gallery-image.vertical {
+		height: 365px !important;
+	}
+
+	.slideshow-buttons a img {
+		width: 50px;
+		height: 30px;
+	}
+}
+
+@media screen and ( min-width: 720px ) {
+	.gallery-image.vertical {
+		height: 480px !important;
+	}
+}
+
+/* =Share-A-Photo
+-------------------------------------------------------------- */
+body.living-flea #shaph-modal  {
+	background-color: #f7941d;
+	border: 1px solid #fdc689;
+	max-width: 800px;
+}
+
+body.living-flea .shaph-title {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	color: #000;
+}
+
+body.living-flea #shaph-browse {
+	background: #fffcf2;
+	color: #000;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+body.living-flea #shaph-browse:hover {
+	color: #555;
+}
+
+body.living-flea #shaph-cancel {
+	color: #fffcf2;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+body.living-flea #shaph-cancel:hover {
+	color: white;
+}
+
+body.living-flea #shaph-page p {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	text-align: center;
+	color: #fffcf2;
+}
+
+body.living-flea #shaph-page p.loading, p.loading {
+	color: #555;
+	margin: 0;
+	font-style:  italic;
+}
+
+body.living-flea #shaph-page p a, body.living-flea #shaph-page p a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+body.living-flea #shaph-page p a:hover {
+	text-decoration: underline;
+}
+
+body.living-flea #shaph-page label {
+	color: #000;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+body.living-flea #shaph-page .text-input {
+	background-color: #fdc689;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	color: #000;
+}
+
+body.living-flea #shaph-footer-buttons {
+	background-color: #fdc689;
+}
+
+body.living-flea #shaph-footer-buttons input {
+	background: #fffcf2;
+	color: #000;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	padding: 10px 40px;
+}
+
+body.living-flea #shaph-footer-buttons input:hover {
+	background: #f7941d;
+}
+
+#marketSelect li a {
+	cursor: pointer;
+	display: block;
+	text-align: center;
+	padding: 5px;
+	margin: 0 0 5px 0;
+	background: #fdc689;
+}
+
+#marketSelect li a.active {
+	background: #fffcf2;
+}
+
+/* =Facebook Login
+-------------------------------------------------------------- */
+
+#fblogout {
+	font-size: 10px;
+}
+
+#fblogout a, #fblogout a:hover {
+	color: #777;
+	cursor: pointer;
+}
+
+@media screen and ( min-width: 510px ) {
+	#fblogout {
+		font-size: 12px;
+	}
+}
+
+@media screen and ( min-width: 720px ) {
+	#fblogout {
+		font-size: 14px;
+	}
+}
+
+/* =Archive Pages
+-------------------------------------------------------------- */
+.archive-header {
+	margin-bottom: 10px;
+}
+
+.archive-header .avatar {
+	width: 100%;
+}
+
+.archive-header .avatar img {
+	width: 60%;
+	height: auto;
+	border: 1px solid #555;
+	margin: 0 auto 10px auto;
+	display: block;
+}
+
+.archive-header .info {
+	width: 100%;
+}
+
+p.flea-market-location {
+	margin-bottom: 20px;
+}
+
+p.archive-count {
+	text-align: center;
+	color: #555;
+	border-bottom: 1px dashed #555;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+}
+
+.archive-header h2 {
+	text-align: center;
+}
+
+@media screen and ( min-width: 510px ) {
+
+	.archive-header {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-justify-content: space-around;
+		justify-content: space-around;
+		-webkit-align-items: center;
+		align-items: flex-start;
+	}
+
+	.archive-header .avatar + .info {
+		width: 70%;
+	}
+
+	.archive-header .avatar {
+		width: 20%;
+	}
+
+	.archive-header .avatar img {
+		width: 100%;
+	}
+
+	.archive-header h2 {
+		text-align: left;
+	}
+}
+
+/* =Archive Pages
+-------------------------------------------------------------- */
+.page-title {
+	text-align: center;
+}
+
+.page-content img.border {
+	border: 1px solid #555;
+}
+
+.page-content img {
+	max-width: 100%;
+	height: auto;
+}
+
+.page-content p a, .page-content p a:visited {
+	color: #f7941d;
+	text-decoration: none;
+	font-weight: 900;
+}
+
+.page-content p a:hover {
+	text-decoration: underline;
+}
+
+/* =Archive Pages
+-------------------------------------------------------------- */
+#footer {
+	padding: 20px 10px;
+	background-color: #000;
+	margin: 30px 0 0 0;
+	color: #CCC;
+}
+
+#footer a, #footer a:visited {
+	color: white;
+	text-decoration: none;
+}
+
+#footer a:hover {
+	text-decoration: underline;
+}
