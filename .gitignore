@@ -1,0 +1,12 @@
+# ignore all
+*
+
+# add living flea theme
+!wp-content/themes/original-flea
+
+# add living flea plugin
+!wp-content/plugins/living-flea
+
+# anything else?
+!.gitignore
+
