@@ -11,7 +11,12 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'content' ); ?>
+			
+			<?php if ( has_term( 'news', 'category' ) ) : ?>
+				<?php get_template_part( 'content-news' ); ?>
+			<?php else : ?>
+				<?php get_template_part( 'content' ); ?>
+			<?php endif; ?>
 
 		<?php endwhile; // end of the loop. ?>
 
