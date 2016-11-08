@@ -14,12 +14,26 @@
 			<p class="post-market"><?php the_flea_market_link(); ?></p>
 		</div>
 		<div class="post-date">
-			<p><a href="<?php the_permalink(); ?>"><?php the_time( 'M j, Y' ); ?></a></p>
+			<p>
+				<?php if ( is_single() ) : ?>
+					<?php the_time( 'M j, Y' ); ?>
+				<?php else : ?>
+					<a href="<?php the_permalink(); ?>"><?php the_time( 'M j, Y' ); ?></a>
+				<?php endif; ?>
+			</p>
 		</div>
 	</div>
-	<a class="post-title" href="<?php the_permalink(); ?>">
-		<?php the_title(); ?>
-	</a>
+
+	<?php if ( is_single() ) : ?>
+		<span class="post-title">
+			<?php the_title(); ?>
+		</span>
+	<?php else : ?>
+		<a class="post-title" href="<?php the_permalink(); ?>">
+			<?php the_title(); ?>
+		</a>
+	<?php endif; ?>
+
 	<div class="post-content">
 		<?php the_content(); ?>
 	</div>
