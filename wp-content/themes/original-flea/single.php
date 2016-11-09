@@ -1,6 +1,7 @@
 <?php
 /**
  * The template for displaying all single posts.
+ * Simply sets some wrapper divs and grabs the content template.
  *
  * @package Original Flea
  */
@@ -11,12 +12,7 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			
-			<?php if ( has_term( 'news', 'category' ) ) : ?>
-				<?php get_template_part( 'content-news' ); ?>
-			<?php else : ?>
-				<?php get_template_part( 'content' ); ?>
-			<?php endif; ?>
+			<?php get_template_part( 'content' ); ?>
 
 		<?php endwhile; // end of the loop. ?>
 
