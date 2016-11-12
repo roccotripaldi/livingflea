@@ -1,6 +1,7 @@
 <?php
 /**
  * The content for an image or gallery post.
+ * Mark-up changes if `is_single()`.
  *
  * @package Original Flea
  */

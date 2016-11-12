@@ -156,3 +156,11 @@ function jptweak_remove_share() {
 	remove_filter( 'the_excerpt', 'sharing_display',19 );
 }
 add_action( 'loop_start', 'jptweak_remove_share' );
+
+function living_flea_format_news_excerpt( $output ) {
+	$excerpt = sprintf( '<p class="news-excerpt">%s</p>', $output );
+	$read_more = sprintf( '<p><a href="%s">Read on...</a></p>', get_the_permalink() );
+	return $excerpt . $read_more;
+}
+
+add_filter( 'get_the_excerpt', 'living_flea_format_news_excerpt' );

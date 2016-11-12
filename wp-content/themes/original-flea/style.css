@@ -784,3 +784,21 @@ p.archive-count {
 #footer a:hover {
 	text-decoration: underline;
 }
+
+/* = News
+-------------------------------------------------------------- */
+.post-content.news {
+	padding: 24px;
+}
+
+.news-title {
+	font-size: 30px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.news-excerpt {
+	font-style: italic;
+	line-height: 22px;
+	text-align: justify;
+}
