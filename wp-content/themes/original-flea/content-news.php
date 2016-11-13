@@ -5,29 +5,20 @@
  *
  * @package Original Flea
  */
+
 ?>
-<div class="post-header">
-    <div class="avatar">
-        <?php living_flea_the_avatar(); ?>
+<?php if ( is_single() ) : ?>
+    <h2 class="page-title"><?php the_title(); ?></h2>
+    <div class="post-content news">
+        <?php the_content(); ?>
     </div>
-    <div class="post-meta">
-        <p class="post-author"><?php the_author(); ?></a></p>
-        <p class="post-market"><?php the_flea_market_link(); ?></p>
+    <?php get_template_part( 'comments' ); ?>
+<?php else : ?>
+    <?php get_template_part( 'article', 'header' ); ?>
+    <span class="post-title news-flash">* * * * * News Flash * * * * *</span>
+    <div class="post-content news">
+        <a class="news-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        <?php the_excerpt(); ?>
     </div>
-    <div class="post-date">
-        <p>
-            <?php if ( is_single() ) : ?>
-                <?php the_time( 'M j, Y' ); ?>
-            <?php else : ?>
-                <a href="<?php the_permalink(); ?>"><?php the_time( 'M j, Y' ); ?></a>
-            <?php endif; ?>
-        </p>
-    </div>
-</div>
+<?php endif; ?>
 
-<span class="post-title news-flash">* * * * * News Flash * * * * *</span>
-
-<div class="post-content news">
-    <p class="news-title"><?php the_title(); ?></p>
-    <?php the_excerpt(); ?>
-</div>

@@ -9,8 +9,8 @@
 
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php if ( has_term( 'news', 'category' ) ) : ?>
-		<?php get_template_part( 'content-news' ); ?>
+		<?php get_template_part( 'content', 'news' ); ?>
 	<?php else : ?>
-		<?php get_template_part( 'content-image' ); ?>
+		<?php get_template_part( 'content', 'image' ); ?>
 	<?php endif; ?>
 </div>
