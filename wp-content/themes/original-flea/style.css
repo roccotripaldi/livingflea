@@ -821,3 +821,11 @@ p.archive-count {
 	line-height: 22px;
 	text-align: justify;
 }
+
+p.byline {
+	font-size: 14px;
+	font-style: italic;
+	text-align: right;
+	border-bottom: 1px solid #555;
+	padding: 0 0 8px 0;
+}

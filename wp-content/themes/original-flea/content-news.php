@@ -5,11 +5,12 @@
  *
  * @package Original Flea
  */
-
+$author_id = get_the_author_meta( 'ID' );
+$author_link = get_author_posts_url( $author_id );
 ?>
 <?php if ( is_single() ) : ?>
     <h2 class="page-title"><?php the_title(); ?></h2>
-    <p>By <?php the_author(); ?>, <?php the_time( 'M j, Y' ); ?></p>
+    <p class="byline">By <a href="<?php echo $author_link; ?>"><?php the_author(); ?></a>, <?php the_time( 'M j, Y' ); ?></p>
     <div class="page-content news">
         <?php the_content(); ?>
     </div>
