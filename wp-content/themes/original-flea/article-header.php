@@ -11,7 +11,7 @@
         <?php living_flea_the_avatar(); ?>
     </div>
     <div class="post-meta">
-        <p class="post-author"><?php the_author(); ?></a></p>
+        <p class="post-author"><?php the_author(); ?></p>
         <p class="post-market"><?php the_flea_market_link(); ?></p>
     </div>
     <div class="post-date">

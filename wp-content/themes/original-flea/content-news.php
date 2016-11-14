@@ -9,6 +9,7 @@
 ?>
 <?php if ( is_single() ) : ?>
     <h2 class="page-title"><?php the_title(); ?></h2>
+    <p>By <?php the_author(); ?>, <?php the_time( 'M j, Y' ); ?></p>
     <div class="post-content news">
         <?php the_content(); ?>
     </div>
