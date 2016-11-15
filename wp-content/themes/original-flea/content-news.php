@@ -14,7 +14,15 @@ $author_link = get_author_posts_url( $author_id );
     <div class="page-content news">
         <?php the_content(); ?>
     </div>
+
+    <div class="post-meta-single-news">
+        <p>Check out more <a href="/category/news">flea-market news</a>.</p>
+        <p>See more stories from <?php the_flea_market_link(); ?></p>
+    </div>
+
     <?php get_template_part( 'comments' ); ?>
+
+
 <?php else : ?>
     <?php get_template_part( 'article', 'header' ); ?>
     <span class="post-title news-flash">* * * * * News Flash * * * * *</span>
