@@ -68,14 +68,22 @@ class Living_Flea_Galleries {
     }
 
     public function render_image( $attachment, $index = false ) {
-        add_filter( 'jetpack_photon_override_image_downsize', '__return_true' );
-        $imageInfo = wp_get_attachment_image_src( $attachment->ID, 'large' );
-        remove_filter( 'jetpack_photon_override_image_downsize', '__return_true' );
         $img = wp_get_attachment_image_src( $attachment->ID, 'large' );
         $hidden = ( $index > 0 ) ? 'hidden' : '';
-        $ratio = $imageInfo[1] / $imageInfo[2];
-        $vertical = ( $ratio <= 1.2 ) ? 'vertical' : '';
-        echo "<img src='" . $img[0] . "' alt='' class='gallery-image $hidden $vertical' width='" . $imageInfo[1] . "' height='" . $imageInfo[2] . "' />";
+        $exif = exif_read_data( $img[0] );
+        $orientation = isset( $exif['Orientation'] ) ? (int) $exif['Orientation'] : 0;
+        switch( $orientation ) {
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+                $vertical = 'vertical';
+                break;
+            default:
+                $ratio = $img[1] / $img[2];
+                $vertical = ( $ratio <= 1.2 ) ? 'vertical' : '';
+        }
+        echo "<img src='" . $img[0] . "' alt='' class='gallery-image $hidden $vertical' width='" . $img[1] . "' height='" . $img[2] . "' />";
     }
 
     public function render_caption( $attachment, $index = false ) {
