@@ -90,7 +90,6 @@ function the_flea_market_link( $empty_text = 'Living Flea' ) {
 
 function the_flea_market_avatar( $market ) {
 	$avatar = get_field( 'flea_market_image', $market );
-	error_log( print_r( $avatar, true ) );
 	if ( $avatar ) {
 		$src = $avatar['sizes']['medium'];
 		echo "<div class='avatar'><img src='$src' alt='" . esc_attr( $market->name ) . "' /></div>";
