@@ -748,7 +748,7 @@ p.archive-count {
 	}
 }
 
-/* =Archive Pages
+/* = Simple Pages
 -------------------------------------------------------------- */
 .page-title {
 	text-align: center;
@@ -773,7 +773,7 @@ p.archive-count {
 	text-decoration: underline;
 }
 
-/* =Archive Pages
+/* = Footer
 -------------------------------------------------------------- */
 #footer {
 	padding: 20px 10px;
