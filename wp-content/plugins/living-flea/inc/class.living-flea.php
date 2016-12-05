@@ -306,6 +306,7 @@ class Living_Flea  {
     public function print_scripts() {
         $args = array(
             'fields'            => 'names',
+            'hide_empty'        => false,
         );
         $markets = get_terms( 'flea-markets', $args);
         $living_flea_js_globals = array(
