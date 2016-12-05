@@ -529,20 +529,26 @@ div.sharedaddy h3.sd-title:before {
 
 .slideshow-buttons {
 	position: absolute;
-	width: 100%;
-	text-align: center;
+	width: 104%;
 	height: 48px;
-	bottom: 10px;
-	opacity: 0.4;
-}
-
-.slideshow-buttons:hover {
-	opacity: 0.8;
+	bottom: 50px;
+	left: -2%;
 }
 
 .slideshow-buttons a {
 	cursor: pointer;
+	position: absolute;
+	top: 0px;
 }
+
+.slideshow-buttons a.next {
+	right: 0px;
+}
+
+.slideshow-buttons a.prev {
+	left: 0px;
+}
+
 
 .slideshow-buttons a img {
 	width: 40px;
