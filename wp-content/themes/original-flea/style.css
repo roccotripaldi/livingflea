@@ -840,3 +840,20 @@ p.byline {
 	border-bottom: 1px solid #555;
 	margin-bottom: 24px;
 }
+
+/* = See More Section
+-------------------------------------------------------------- */
+#see-more p {
+	text-align: center;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+#see-more p a, #see-more p a:visited {
+	color: #f7941d;
+	text-decoration: none;
+}
+
+#see-more p a:hover {
+	text-decoration: underline;
+}

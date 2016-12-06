@@ -14,3 +14,15 @@
 		<?php get_template_part( 'content', 'image' ); ?>
 	<?php endif; ?>
 </div>
+
+
+<?php if ( is_single() ) :
+	$author_id = get_the_author_meta( 'ID' );
+	$author_link = get_author_posts_url( $author_id );
+	?>
+	<div id="see-more">
+		<p>See more posts from <?php the_flea_market_link(); ?></p>
+		<p>See more posts by <a href="<?php echo $author_link; ?>"><?php the_author(); ?></a></p>
+	</div>
+<?php endif; ?>
+
