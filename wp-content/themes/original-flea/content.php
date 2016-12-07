@@ -8,7 +8,7 @@
 ?>
 
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php if ( has_term( 'news', 'category' ) ) : ?>
+	<?php if ( has_term( 'words', 'category' ) ) : ?>
 		<?php get_template_part( 'content', 'news' ); ?>
 	<?php else : ?>
 		<?php get_template_part( 'content', 'image' ); ?>
@@ -21,8 +21,8 @@
 	$author_link = get_author_posts_url( $author_id );
 	?>
 	<div id="see-more">
-		<p>See more posts from <?php the_flea_market_link(); ?></p>
-		<p>See more posts by <a href="<?php echo $author_link; ?>"><?php the_author(); ?></a></p>
+		<p>See more stories from <?php the_flea_market_link(); ?></p>
+		<p>See more stories by <a href="<?php echo $author_link; ?>"><?php the_author(); ?></a></p>
 	</div>
 <?php endif; ?>
 
