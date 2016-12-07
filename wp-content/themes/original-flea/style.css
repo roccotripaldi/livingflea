@@ -75,7 +75,7 @@ a img {
 	border: 0;
 }
 
-/* =Global
+/* = Global
 -------------------------------------------------------------- */
 body {
 	background: #fffcf2;
@@ -764,10 +764,20 @@ p.archive-count {
 	border: 1px solid #555;
 }
 
+.page-content ul {
+	list-style-type: square;
+	margin: 0 0 10px 40px;
+}
+
+.page-content li {
+	margin-bottom: 5px;
+}
+
 .page-content img {
 	max-width: 100%;
 	height: auto;
 }
+
 
 .page-content p a, .page-content p a:visited {
 	color: #f7941d;
