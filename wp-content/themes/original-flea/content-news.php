@@ -15,17 +15,14 @@ $author_link = get_author_posts_url( $author_id );
         <?php the_content(); ?>
     </div>
 
-    <div class="post-meta-single-news">
-        <p>Check out more <a href="/category/news">flea-market news</a>.</p>
-        <p>See more stories from <?php the_flea_market_link(); ?></p>
-    </div>
-
     <?php get_template_part( 'comments' ); ?>
 
 
-<?php else : ?>
+<?php else :
+    $article_type = has_term( 'news', 'category' ) ? 'News Flash' : 'Blog';
+    ?>
     <?php get_template_part( 'article', 'header' ); ?>
-    <span class="post-title news-flash">* * * * * News Flash * * * * *</span>
+    <span class="post-title news-flash">* * * * * <?php echo $article_type; ?> * * * * *</span>
     <div class="post-content news">
         <a class="news-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
         <?php the_excerpt(); ?>
